@@ -99,4 +99,7 @@ div {
 ```
 
 -   `animation-fill-mode: forwards;` specifies the style applied to an element when the animation has finished. This stops it from resetting.
--   `animation-iteration-count` allows you to control how many times you would like
+-   `animation-iteration-count` allows you to control how many times you would like the animation to run. You can use `infinite`.
+-   `animation-timing-function` controls how quickly an animated element changes over the duration of an animation. Keywords include `ease-out`, `ease-in` etc.
+-   Bezier curves use `cubic-bezier` function. These curves live on a 1x1 coordinate and use the X and Y-axis, with anchor points. Example: `animation-duration: 1s;`
+-
