@@ -1,0 +1,53 @@
+html {
+    font-family: Lato;
+    color: #333;
+}
+
+body {
+    background-color: #f3f3f3;
+    font-size: 1.1rem;
+}
+
+ul {
+    max-width: 550px;
+    margin: 0 auto 50px auto;
+    text-align: left;
+    line-height: 1.6em;
+}
+
+li {
+    margin: 20px 0px;
+}
+
+#img-div {
+    background-color: white;
+    padding: 20px;
+}
+
+#image {
+    margin: auto;
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+#img-caption {
+    margin-top: 10px;
+    margin-bottom: -10px;
+    font-size: 14px;
+}
+
+#title,
+#img-caption,
+#tribute-info,
+#tribute-link {
+    text-align: center;
+}
+
+#tribute-info {
+    margin-top: 30px;
+}
+
+#tribute-link {
+    padding-bottom: 50px;
+}
