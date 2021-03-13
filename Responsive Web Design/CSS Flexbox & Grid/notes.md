@@ -33,6 +33,9 @@
 -   We can use the `repeat()` function to create ongoing rows or columns rather than manually inserting them i.e. `grid-template-rows: repeat(100, 50px);`
 -   We can limit item size using the `minmax()` function. It's used to limit the size of items when the grid container changes i.e. `grid-template-columns: 100px minmax(50px, 200px);`
 -   The `repeat` function also comes with an `auto-fill` option.
+-   `repeat()` comes with an option called `auto-fill` which will automatically insert as many rows or columns that will possibly fit in the container.
+-   `auto-fit` works the same way except when the container extends, it stretches your items to fit the container.
+-
 
 **Area Templates**
 
