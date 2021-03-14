@@ -4,42 +4,178 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Dunder Mifflin Paper Company | Contact Us</title>
+        <link rel="stylesheet" href="stylesheet.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <title>NHS | Book your COVID-19 vaccination</title>
     </head>
     <body>
-        <nav>
-            <img
-                id="logo"
-                src="https://i.pinimg.com/474x/c4/10/5a/c4105ad7ef5aac4ff95fafe3e1920f13.jpg"
-                alt="Dunder Mifflin Logo"
-            />
-        </nav>
-        <main>
-            <h1 id="title">Contact Dunder Mifflin Today</h1>
+        <header id="header-container">
+            <div id="header-area">
+                <img
+                    id="logo"
+                    src="https://1000logos.net/wp-content/uploads/2017/09/Symbol-NHS.jpg"
+                    width="90px"
+                    alt="NHS-Logo-Blue"
+                />
+                <p id="hospital-name">FCC University Hospitals</p>
+                <p id="trust-name">NHS Freecodecamp Trust</p>
+                <div id="search-container">
+                    <input id="search-bar" placeholder="Search" />
+                </div>
+            </div>
+        </header>
+        <main id="main-container">
+            <nav id="breadcrumbs">
+                <a href="#">FCC</a> >   
+                <a href="#">RWD</a> >
+                <a href="#">Projects</a> >
+                <a href="#">JSON-19 Survey Form</a>
+            </nav>
+            <h1 id="title">Book your JSON-19 vaccination</h1>
             <p id="description">
-                Get in touch with one of our sales representatives today.
+                The jsonvirus (JSON-19) vaccination is safe and effective. It
+                gives you the best protection against unstructured data.
             </p>
             <form id="survey-form">
-                <p>Full Name*</p>
-                <input
-                    type="text"
-                    id="name"
-                    placeholder="Dwight Schrute"
-                    required
-                />
+                <!--Personal Data Section-->
+                <div class="form-group">
+                    <label id="name-label">Full Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Joe Bloggs"
+                        required
+                    />
+                </div>
+                <div class="form-group">
+                    <label id="email-label">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="joe.bloggs@me.com"
+                        required
+                    />
+                </div>
+                <div class="form-group">
+                    <label id="number-label">Number</label>
+                    <input
+                        type="number"
+                        id="number"
+                        placeholder="01274 456 898 "
+                        min="7"
+                        max="9"
+                    />
+                </div>
 
-                <p>Email Address*</p>
-                <input
-                    type="email"
-                    id="email"
-                    placeholder="dwight.s@dundermifflin.com"
-                    required
-                />
+                <!--Job Role Section-->
+                <div class="form-group">
+                    <label for="dropdown" id="dropdown-label"
+                        >What option describes your current role?</label
+                    >
+                    <select id="dropdown" default="Current Role">
+                        <option value="Director">Director</option>
+                        <option value="Sales Manager">Sales Manager</option>
+                        <option value="Clerk">Clerk</option>
+                        <option value="Wholesaler">Wholesaler</option>
+                    </select>
+                </div>
 
-                <p>Contact Number</p>
-                <input type="number" id="number" placeholder="818-424-4551" />
+                <!--Quantity Section-->
+                <div class="form-group">
+                    <label for="0-999">
+                        <input
+                            value="0-999"
+                            type="radio"
+                            name="quantity-group"
+                        />0-999
+                    </label>
+
+                    <label for="1000-9999">
+                        <input
+                            value="1000-9999"
+                            type="radio"
+                            name="quantity-group"
+                        />1000-9999
+                    </label>
+
+                    <label for="10000-99999">
+                        <input
+                            value="10000-99999"
+                            type="radio"
+                            name="quantity-group"
+                        />10000-99999
+                    </label>
+
+                    <label for="100000+">
+                        <input
+                            value="100000+"
+                            type="radio"
+                            name="quantity-group"
+                        />100000+
+                    </label>
+                </div>
+                <!--Additional Products Section-->
+                <div class="form-group">
+                    <label for="coated">
+                        <input
+                            value="coated"
+                            type="checkbox"
+                            name="other-products-group"
+                        />Coated Paper
+                    </label>
+                    <label for="uncoated">
+                        <input
+                            value="uncoated"
+                            type="checkbox"
+                            name="other-products-group"
+                        />Uncoated Paper
+                    </label>
+                    <label for="60GSM">
+                        <input
+                            value="60GSM"
+                            type="checkbox"
+                            name="other-products-group"
+                        />60GSM
+                    </label>
+                    <label for="80GSM">
+                        <input
+                            value="80GSM"
+                            type="checkbox"
+                            name="other-products-group"
+                        />80GSM
+                    </label>
+                    <label for="recycled">
+                        <input
+                            value="recycled"
+                            type="checkbox"
+                            name="other-products-group"
+                        />Recycled
+                    </label>
+                </div>
+                <!--Additional Comments Section-->
+                <div class="form-group">
+                    <label for="comments-section"
+                        >Any additional information?
+                        <textarea id="comments-section"> </textarea>
+                    </label>
+                </div>
+                    <button
+                        id="submit"
+                        type="submit"
+                        form="survey-form"
+                        value="Submit"
+                    >
+                        Book my vaccine
+                    </button>
+                </div>
             </form>
         </main>
+        <footer id="footer">
+        </footer>
     </body>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </html>
