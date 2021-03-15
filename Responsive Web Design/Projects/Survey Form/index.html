@@ -4,178 +4,189 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/jpg" href="https://www.england.nhs.uk/nhsidentity/wp-content/themes/nhsengland-identity/templates/assets/img/favicon.png" />
         <link rel="stylesheet" href="stylesheet.css" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
             href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700&display=swap"
             rel="stylesheet"
         />
-        <title>NHS | Book your COVID-19 vaccination</title>
+        <title>NHS | Book your FCC-19 vaccination</title>
     </head>
     <body>
-        <header id="header-container">
-            <div id="header-area">
-                <img
-                    id="logo"
-                    src="https://1000logos.net/wp-content/uploads/2017/09/Symbol-NHS.jpg"
-                    width="90px"
-                    alt="NHS-Logo-Blue"
-                />
-                <p id="hospital-name">FCC University Hospitals</p>
-                <p id="trust-name">NHS Freecodecamp Trust</p>
-                <div id="search-container">
-                    <input id="search-bar" placeholder="Search" />
-                </div>
-            </div>
-        </header>
-        <main id="main-container">
-            <nav id="breadcrumbs">
-                <a href="#">FCC</a> >   
-                <a href="#">RWD</a> >
-                <a href="#">Projects</a> >
-                <a href="#">JSON-19 Survey Form</a>
-            </nav>
-            <h1 id="title">Book your JSON-19 vaccination</h1>
-            <p id="description">
-                The jsonvirus (JSON-19) vaccination is safe and effective. It
-                gives you the best protection against unstructured data.
-            </p>
-            <form id="survey-form">
-                <!--Personal Data Section-->
-                <div class="form-group">
-                    <label id="name-label">Full Name</label>
-                    <input
-                        type="text"
-                        id="name"
-                        placeholder="Joe Bloggs"
-                        required
+        <div id="content-wrapper">
+            <header id="header-container">
+                <div id="header-area">
+                    <img
+                        id="logo"
+                        src="https://1000logos.net/wp-content/uploads/2017/09/Symbol-NHS.jpg"
+                        width="90px"
+                        alt="NHS-Logo-Blue"
                     />
+                    <p id="hospital-name">FCC University Hospitals</p>
+                    <p id="trust-name">NHS Freecodecamp Trust</p>
+                    <div id="search-container">
+                        <input id="search-bar" placeholder="Search" />
+                        <button id="search-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Magnifying_glass_icon.svg/1200px-Magnifying_glass_icon.svg.png" height="20px" alt="Magnifying_glass_icon" /></button>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label id="email-label">Email</label>
-                    <input
-                        type="email"
-                        id="email"
-                        placeholder="joe.bloggs@me.com"
-                        required
-                    />
-                </div>
-                <div class="form-group">
-                    <label id="number-label">Number</label>
-                    <input
-                        type="number"
-                        id="number"
-                        placeholder="01274 456 898 "
-                        min="7"
-                        max="9"
-                    />
-                </div>
+            </header>
+            <main id="main-container">
+                <nav id="breadcrumbs">
+                    <a href="#">FCC</a> >   
+                    <a href="#">RWD</a> >
+                    <a href="#">Projects</a> >
+                    <a href="#">FCC-19 Survey Form</a>
+                </nav>
+                <h1 id="title">Book or manage your FCC-19 vaccination</h1>
+                <p id="description">
+                    The codecampovirus (FCC-19) vaccination is safe and effective. It
+                    gives you the best protection against imposter syndrome.
+                </p>
 
-                <!--Job Role Section-->
-                <div class="form-group">
-                    <label for="dropdown" id="dropdown-label"
-                        >What option describes your current role?</label
-                    >
-                    <select id="dropdown" default="Current Role">
-                        <option value="Director">Director</option>
-                        <option value="Sales Manager">Sales Manager</option>
-                        <option value="Clerk">Clerk</option>
-                        <option value="Wholesaler">Wholesaler</option>
-                    </select>
-                </div>
+                <!--Form Begins-->
+                <form id="survey-form">
+                    <div class="form-group">
+                        <p class="label-description">Are you reporting for your own program?</p>
+                        <label for="yes">
+                            <input
+                                value="yes"
+                                type="radio"
+                                name="reporting"
+                            />Yes
+                        </label>
+                        <br>
+                        <label for="no">
+                            <input
+                                value="no"
+                                type="radio"
+                                name="reporting"
+                            />No
+                    </div>
 
-                <!--Quantity Section-->
-                <div class="form-group">
-                    <label for="0-999">
+                    <!--Personal Data Section-->
+                    <div class="form-group">
+                        <label id="name-label">Full Name</label>
                         <input
-                            value="0-999"
-                            type="radio"
-                            name="quantity-group"
-                        />0-999
-                    </label>
+                            type="text"
+                            id="name"
+                            placeholder="Joe Bloggs"
+                            required
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label id="age-label">Patient's Age</label>
+                        <input 
+                            type="number" 
+                            id="number"
+                            placeholder="18" 
+                            min="1"
+                            max="99" 
+                            required
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label id="email-label">Email Address</label>
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="joe.bloggs@me.com"
+                            required
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label id="number-label">Contact Number</label>
+                        <input
+                            type="text"
+                            id="number"
+                            placeholder="01274 456 898 "
+                        />
+                    </div>
 
-                    <label for="1000-9999">
-                        <input
-                            value="1000-9999"
-                            type="radio"
-                            name="quantity-group"
-                        />1000-9999
-                    </label>
+                    <!--Job Role Section-->
+                    <div class="form-group">
+                        <label for="dropdown" id="dropdown-label"
+                            >What option describes your current role?</label
+                        >
+                        <select id="dropdown" default="Current Role">
+                            <option value="Entry-Level">Entry-Level</option>
+                            <option value="Junior">Junior</option>
+                            <option value="Mid-Level">Mid-Level</option>
+                            <option value="Senior+">Senior or above</option>
+                        </select>
+                    </div>
 
-                    <label for="10000-99999">
-                        <input
-                            value="10000-99999"
-                            type="radio"
-                            name="quantity-group"
-                        />10000-99999
-                    </label>
+                    <!--Languages Section-->
+                    <div class="form-group">
+                        <p class="label-description">Which languages are you interested in?</p>
+                        <label for="JavaScript">
+                            <input
+                                value="JavaScript"
+                                type="checkbox"
+                                name="language-group"
+                            />JavaScript
+                        </label>
+                        <br>
+                        <label for="Python">
+                            <input
+                                value="Python"
+                                type="checkbox"
+                                name="language-group"
+                            />Python
+                        </label>
+                        <br>
+                        <label for="Java">
+                            <input
+                                value="Java"
+                                type="checkbox"
+                                name="language-group"
+                            />Java
+                        </label>
+                        <br>
+                        <label for="PHP">
+                            <input
+                                value="PHP"
+                                type="checkbox"
+                                name="language-group"
+                            />PHP
+                        </label>
+                        <br>
+                        <label for="noneabove">
+                            <input
+                                value="noneabove"
+                                type="checkbox"
+                                name="language-group"
+                            />None of the above
+                        </label>
+                    </div>
 
-                    <label for="100000+">
-                        <input
-                            value="100000+"
-                            type="radio"
-                            name="quantity-group"
-                        />100000+
-                    </label>
+                    <!--Additional Comments Section-->
+                    <div class="form-group">
+                        <label for="comments-section"
+                            >Any additional information?
+                            <textarea id="comments-section" placeholder="Browser type, IDE version, language framework etc."></textarea>
+                        </label>
+                    </div>
+                        <button
+                            id="submit"
+                            type="submit"
+                            form="survey-form"
+                            value="Submit"
+                        >
+                            Book my vaccine
+                        </button>
+                    </div>
+                </form>
+            </main>
+
+            <!--Footer Section-->
+            <footer id="footer">
+                <div id="footer-wrapper">
+                    <p id="footer-text">This site has been created as part of a non-profit web project and has been designed solely for artistic purposes.<br> 
+                        Any logos and likeness relating to the NHS continue to remain under their respective copyrights.</p>
                 </div>
-                <!--Additional Products Section-->
-                <div class="form-group">
-                    <label for="coated">
-                        <input
-                            value="coated"
-                            type="checkbox"
-                            name="other-products-group"
-                        />Coated Paper
-                    </label>
-                    <label for="uncoated">
-                        <input
-                            value="uncoated"
-                            type="checkbox"
-                            name="other-products-group"
-                        />Uncoated Paper
-                    </label>
-                    <label for="60GSM">
-                        <input
-                            value="60GSM"
-                            type="checkbox"
-                            name="other-products-group"
-                        />60GSM
-                    </label>
-                    <label for="80GSM">
-                        <input
-                            value="80GSM"
-                            type="checkbox"
-                            name="other-products-group"
-                        />80GSM
-                    </label>
-                    <label for="recycled">
-                        <input
-                            value="recycled"
-                            type="checkbox"
-                            name="other-products-group"
-                        />Recycled
-                    </label>
-                </div>
-                <!--Additional Comments Section-->
-                <div class="form-group">
-                    <label for="comments-section"
-                        >Any additional information?
-                        <textarea id="comments-section"> </textarea>
-                    </label>
-                </div>
-                    <button
-                        id="submit"
-                        type="submit"
-                        form="survey-form"
-                        value="Submit"
-                    >
-                        Book my vaccine
-                    </button>
-                </div>
-            </form>
-        </main>
-        <footer id="footer">
-        </footer>
+            </footer>
+        </div>
     </body>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </html>

@@ -1,6 +1,5 @@
 html {
     font-family: Mukta;
-    line-height: ;
     color: #222;
     background-color: #f0f4f5;
 }
@@ -11,6 +10,43 @@ a {
     font-size: 18px;
 }
 
+body {
+    margin-top: 150px;
+}
+
+label,
+.label-description {
+    font-size: 18px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    display: block;
+    width: 50%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+    height: 35px;
+}
+
+textarea {
+    height: 100px;
+    font-family: Mukta;
+    font-size: 16px;
+}
+
+#content-wrapper {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 960px;
+}
+
 #header-container {
     background-color: #005eb8;
     height: 130px;
@@ -18,7 +54,6 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-    margin: 0 auto;
 }
 
 #header-area {
@@ -30,19 +65,27 @@ a {
     display: flex;
     justify-content: flex-end;
     position: relative;
-    bottom: 150px;
+    bottom: 190px;
 }
 
 #search-bar {
     padding: 10px;
-    border-radius: 5px;
+    width: 200px;
+    height: 25px;
+    border: none;
+    font-size: 15px;
+}
+
+#search-btn {
+    height: 45px;
+    width: 45px;
+    background-color: rgb(235, 235, 235);
     border: none;
 }
 
 #main-container {
     max-width: 700px;
-    margin: 0 auto;
-    right: 150px;
+    margin-left: -13px;
 }
 
 #hospital-name {
@@ -79,7 +122,7 @@ a {
 }
 
 #submit {
-    margin-top: 10px;
+    margin-top: 30px;
     background-color: #007f3b;
     color: white;
     font-family: Mukta;
@@ -92,11 +135,21 @@ a {
 
 #footer {
     background-color: #d8dde0;
-    height: 130px;
-    width: 100vw;
-    bottom: 0;
-    left: 0;
+    margin-top: 50px;
+    border-top: 5px solid #005eb8;
     position: absolute;
+    width: 100vw;
+    left: 0;
+    color: grey;
+}
+
+#footer-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#footer-text {
+    padding: 20px 0px 20px 0px;
 }
 
 .form-group {
