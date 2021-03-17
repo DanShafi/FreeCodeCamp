@@ -11,6 +11,49 @@ h1 {
     margin-top: 95px;
 }
 
+a {
+    color: rgb(80, 191, 255);
+}
+
+.main-section {
+    margin-top: 50px;
+}
+
+.main-section:last-child {
+    margin-bottom: 50px;
+}
+
+.line-break {
+    margin-top: 50px;
+    opacity: 20%;
+}
+
+#disclaimer {
+    font-size: 13px;
+    margin-top: 50px;
+    color: grey;
+}
+
+#subtitle {
+    font-weight: 100;
+    font-size: 22px;
+    color: darkgrey;
+    margin: -20px 0px 30px 0px;
+}
+
+.code-text {
+    background-color: rgb(255, 255, 200);
+}
+
+.code-bg {
+    background-color: rgb(40, 44, 52);
+    border-radius: 5px;
+    padding: 20px;
+    color: rgb(190, 190, 190);
+    font-size: 13px;
+    width: 800px;
+}
+
 #site-header {
     background-color: #20232a;
     position: fixed;
@@ -42,6 +85,7 @@ h1 {
     width: 300px;
     height: 100%;
     background-color: #f7f7f7;
+    border-right: 1px rgb(228, 228, 228) solid;
 }
 
 #nav-container {
@@ -65,6 +109,7 @@ h1 {
     color: black;
     text-decoration: none;
     font-size: 16px;
+    font-weight: 100;
 }
 
 .nav-link:hover {
@@ -72,9 +117,31 @@ h1 {
     margin-left: 5px;
 }
 
+.header-text {
+    font-size: 27px;
+    font-weight: 600;
+    color: black;
+}
+
+.false-headers {
+    color: grey;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.tip-section {
+    background-color: rgb(255, 255, 225);
+    padding: 5px 20px;
+    width: 700px;
+    margin-left: 0;
+    border-left: 10px solid rgb(255, 253, 119);
+}
+
 #main-doc {
     position: absolute;
-    top: 40px;
+    top: 10px;
     margin-left: 500px;
     padding: 20px;
     margin-bottom: 110px;

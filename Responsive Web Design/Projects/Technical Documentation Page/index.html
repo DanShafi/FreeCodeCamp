@@ -6,7 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="stylesheet.css" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <title>Technical Documentation Page</title>
+        <link
+            rel="icon"
+            type="image/jpeg"
+            href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K"
+        />
+        <title>React Documentation Page</title>
     </head>
     <body>
         <nav id="site-header" aria-label="decorative-header">
@@ -33,17 +38,21 @@
                     <a class="nav-link" href="#create_a_react_component"
                         >Create a React Component</a
                     >
-                    <a class="nav-link" href="#minify_javascript_for_production"
-                        >Minify JavaScript for Production</a
+                    <a class="nav-link" href="#hello_world">Hello World</a>
+                    <a class="nav-link" href="#create_react_app"
+                        >Create React App</a
                     >
-                    <a class="nav-link" href="#quickly_try_JSX"
-                        >Quickly Try JSX</a
-                    >
+                    <p class="false-headers">Main Concepts</p>
+                    <p class="false-headers">Advanced Concepts</p>
+                    <p class="false-headers">API Reference</p>
+                    <p class="false-headers">Hooks</p>
+                    <p class="false-headers">Testing</p>
                 </div>
             </nav>
 
             <div id="doc-intro">
                 <h1>Add React to a Website</h1>
+                <p id="subtitle">Use as little or as much React as you need.</p>
                 <p>
                     React has been designed from the start for gradual adoption,
                     and
@@ -64,93 +73,224 @@
                 </p>
             </div>
 
+            <hr class="line-break" />
+
             <section class="main-section" id="add_a_dom_container">
-                <header>Add a DOM Container</header>
-                <code
-                    >&lt;!-- ... existing HTML ... --&gt; &lt;<br />div
-                    id="like_button_container"&gt;&lt;/div&gt;<br />
-                    &lt;!-- ... existing HTML ... --&gt;</code
-                >
+                <header class="header-text">Add a DOM Container</header>
+                <p>
+                    First, open the HTML page you want to edit. Add an empty
+                    <code class="code-text">&lt;div&gt;</code> tag to mark the
+                    spot where you want to display something with React. For
+                    example:
+                </p>
+                <div class="code-bg">
+                    <code>
+                        &lt;!-- ... existing HTML ... --&gt; &lt;<br /><br />&lt;div
+                        id="like_button_container"&gt;&lt;/div&gt;<br /><br />
+                        &lt;!-- ... existing HTML ... --&gt;</code
+                    >
+                </div>
+                <p>
+                    We gave this
+                    <code class="code-text">&lt;div&gt;</code> a unique
+                    <code class="code-text">id</code> HTML attribute. This will
+                    allow us to find it from the JavaScript code later and
+                    display a React component inside of it.
+                </p>
                 <ul>
-                    <li>List 1</li>
-                    <li>List 2</li>
+                    <li>
+                        Your HTML document does not require any build tooling.
+                    </li>
+                    <li>
+                        If you are new to markup, you can learn more about a div
+                        <a href="https://www.w3schools.com/tags/tag_div.ASP"
+                            >here.</a
+                        >
+                    </li>
                 </ul>
+                <blockquote class="tip-section">
+                    <p><strong>Tip</strong></p>
+                    <p>
+                        You can place a “container”
+                        <code class="code-text">&lt;div&gt;</code> like this
+                        <strong>anywhere</strong> inside the
+                        <code class="code-text">&lt;body&gt;</code> tag. You may
+                        have as many independent DOM containers on one page as
+                        you need. They are usually empty — React will replace
+                        any existing content inside DOM containers.
+                    </p>
+                </blockquote>
             </section>
+
+            <hr class="line-break" />
 
             <section class="main-section" id="add_the_script_tags">
-                <header>Add The Script Tags</header>
+                <header class="header-text">Add The Script Tags</header>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Alias, a.
+                    Next, add three
+                    <code class="code-text">&lt;script&gt;</code> tags to the
+                    HTML page right before the closing
+                    <code class="code-text">&lt;/body&gt;</code> tag:
                 </p>
+                <div class="code-bg">
+                    <code>
+                        &lt;!-- ... other HTML ... --&gt; &lt;!-- Load React.
+                        --&gt; &lt;!-- Note: when deploying, replace
+                        "development.js" with "production.min.js". --&gt;
+                        <br /><br />&lt;script
+                        src="https://unpkg.com/react@17/umd/react.development.js"
+                        crossorigin&gt;&lt;/script&gt;<br /><br />
+                        &lt;script
+                        src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+                        crossorigin&gt;&lt;/script&gt;<br /><br />
+                        &lt;!-- Load our React component. --&gt; &lt;script
+                        src="like_button.js"&gt;&lt;/script&gt; &lt;/body&gt;
+                    </code>
+                </div>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Alias, a.
+                    The first two tags load React. The third one will load your
+                    component code.
                 </p>
-                <code
-                    >&lt;!-- ... existing HTML ... --&gt; &lt;<br />div
-                    id="like_button_container"&gt;&lt;/div&gt;<br />
-                    &lt;!-- ... existing HTML ... --&gt;</code
-                >
             </section>
+
+            <hr class="line-break" />
 
             <section class="main-section" id="create_a_react_component">
-                <header>Create a React Component</header>
+                <header class="header-text">Create a React Component</header>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Alias, a.
+                    Create a file called
+                    <code class="code-text">like_button.js</code> next to your
+                    HTML page.
                 </p>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Alias, a.
+                    Open
+                    <strong
+                        ><a
+                            href="https://gist.github.com/gaearon/0b180827c190fe4fd98b4c7f570ea4a8/raw/b9157ce933c79a4559d2aa9ff3372668cce48de7/LikeButton.js"
+                            target="_blank"
+                            rel="nofollow noopener noreferrer"
+                            >this starter code</a
+                        ></strong
+                    >
+                    and paste it into the file you created.
                 </p>
-                <code
-                    >&lt;!-- ... existing HTML ... --&gt; &lt;<br />div
-                    id="like_button_container"&gt;&lt;/div&gt;<br />
-                    &lt;!-- ... existing HTML ... --&gt;</code
-                >
+                <blockquote class="tip-section">
+                    <p>
+                        <strong>Tip</strong><br />
+                        This code defines a React component called LikeButton.
+                        Don’t worry if you don’t understand it yet — we’ll cover
+                        the building blocks of React later in our hands-on
+                        tutorial and main concepts guide. For now, let’s just
+                        get it showing on the screen!
+                    </p>
+                </blockquote>
+                <p>
+                    After
+                    <strong
+                        ><a
+                            href="https://gist.github.com/gaearon/0b180827c190fe4fd98b4c7f570ea4a8/raw/b9157ce933c79a4559d2aa9ff3372668cce48de7/LikeButton.js"
+                            target="_blank"
+                            rel="nofollow noopener noreferrer"
+                            >the starter code</a
+                        ></strong
+                    >, add two lines to the bottom of
+                    <code class="code-text">like_button.js</code>:
+                </p>
+                <div class="code-bg">
+                    <code>
+                        const domContainer =
+                        document.querySelector('#like_button_container');
+                        ReactDOM.render(e(LikeButton), domContainer);</code
+                    >
+                </div>
+                <p>
+                    These two lines of code find the
+                    <code class="code-text">&lt;div&gt;</code> we added to our
+                    HTML in the first step, and then display our “Like” button
+                    React component inside of it.
+                </p>
                 <ul>
-                    <li>List 3</li>
-                    <li>List 4</li>
+                    <li>React is built upon the JavaScript language.</li>
+                    <li>
+                        The
+                        <code class="code-text">querySelector()</code> method
+                        returns the first element that matches a specified CSS
+                        selector(s) in the document.
+                    </li>
                 </ul>
             </section>
 
-            <section class="main-section" id="minify_javascript_for_production">
-                <header>Minify JavaScript for Production</header>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Alias, a.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Alias, a.
-                </p>
-                <code
-                    >&lt;!-- ... existing HTML ... --&gt; &lt;<br />div
-                    id="like_button_container"&gt;&lt;/div&gt;<br />
-                    &lt;!-- ... existing HTML ... --&gt;</code
-                >
-            </section>
+            <hr class="line-break" />
 
-            <section class="main-section" id="quickly_try_JSX">
-                <header>Quickly Try JSX</header>
+            <section class="main-section" id="hello_world">
+                <header class="header-text">Hello World</header>
+                <p>It displays a heading saying “Hello, World!” on the page.</p>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Alias, a.
+                    Feel free to make some changes, and see how they affect the
+                    output. Most pages in this guide will have editable examples
+                    like this one.
                 </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Alias, a.
-                </p>
-                <code
-                    >&lt;!-- ... existing HTML ... --&gt; &lt;<br />div
-                    id="like_button_container"&gt;&lt;/div&gt;<br />
-                    &lt;!-- ... existing HTML ... --&gt;</code
-                >
+                <div class="code-bg">
+                    <code
+                        >ReactDOM.render( <br />&lt;h1&gt;Hello,
+                        World!&lt;/h1&gt;,<br />
+                        document.getElementById('root') );</code
+                    >
+                </div>
                 <ul>
-                    <li>List 5</li>
+                    <li>
+                        "Hello, World" was first referenced in 1973 by
+                        <strong>Brian Kernighan</strong>.
+                    </li>
                 </ul>
             </section>
+
+            <hr class="line-break" />
+
+            <section class="main-section" id="create_react_app">
+                <header class="header-text">Create React App</header>
+                <p>
+                    <a
+                        href="https://github.com/facebookincubator/create-react-app"
+                        target="_blank"
+                        rel="nofollow noopener noreferrer"
+                        >Create React App</a
+                    >
+                    is a comfortable environment for
+                    <strong>learning React</strong>, and is the best way to
+                    start building
+                    <strong
+                        >a new
+                        <a href="/docs/glossary.html#single-page-application"
+                            >single-page</a
+                        >
+                        application</strong
+                    >
+                    in React.
+                </p>
+                <p>
+                    It sets up your development environment so that you can use
+                    the latest JavaScript features, provides a nice developer
+                    experience, and optimizes your app for production. You’ll
+                    need to have
+                    <a
+                        href="https://nodejs.org/en/"
+                        target="_blank"
+                        rel="nofollow noopener noreferrer"
+                        >Node &gt;= 10.16 and npm &gt;= 5.6</a
+                    >
+                    on your machine. To create a project, run:
+                </p>
+                <code class="code-bg"
+                    >npx create-react-app my-app cd my-app npm start</code
+                >
+            </section>
+            <p id="disclaimer">
+                React Documentation clone created by
+                <a href="https://github.com/DanShafi" target="_blank"
+                    >Danish Shafi</a
+                >.
+            </p>
         </main>
     </body>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
