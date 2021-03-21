@@ -25,3 +25,15 @@ function functionWithArgs(num1, num2) {
   }
   
   functionWithArgs(5,6);
+
+  // Scoping
+
+  // Setup
+var outerWear = "T-Shirt";
+
+function myOutfit() {
+  var outerWear = "sweater";
+  return outerWear;
+}
+
+myOutfit();
