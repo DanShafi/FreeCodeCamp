@@ -26,9 +26,8 @@ function functionWithArgs(num1, num2) {
   
   functionWithArgs(5,6);
 
-  // Scoping
 
-  // Setup
+//Using scoping in functions
 var outerWear = "T-Shirt";
 
 function myOutfit() {
@@ -37,3 +36,10 @@ function myOutfit() {
 }
 
 myOutfit();
+
+// Using return statement
+function timesFive(num) {
+  return num*5;
+}
+
+timesFive(5);
