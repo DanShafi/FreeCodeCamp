@@ -19,6 +19,7 @@
 -   If you create variables that rely on the result of a calculation to produce a value, this calculation will occur first prior to assignment.
 -   Declared variables have an initial value of `undefined`.
 -   Variables are case sensitive meaning `myVar`, `myVAR` and `MYVAR` are all three different and independent variables.
+-   Booleans are either true or false. They represent binary 0 or 1.
 
 **Arithmetic Operations**
 
@@ -76,3 +77,19 @@
 -   _Parameters_ are variables that act as placeholders for the values are to be input to a function when called. When values are called, this params are then known as **arguments**.
 -   Variables declared in a function have **\*local scope**.\*
 -   You can have local and global variables with the same name, however **the local variable takes precedence the global** if you do this.
+-   We use a `return` statement to send a value **back** out of a function.
+-   If a function outputs an `undefined` and you're expecting a value, it's most likely because there is no `return` statement.
+
+**Conditional Logic**
+
+-   `if` statements make decisions and logic in code. `if` tells JS to execute the code under certain conditions. These conditions are `boolean` values. When the condition is `true`, the statement executes, when `false` it does not.
+-   We use the `==` equality operator which returns `true` if both values are equivalent and `false` when not.
+-   JS evaluates equalities using **type coercion** i.e. converts each data type to one another to evaluate if they are the same i.e. `1` and `"1"`.
+-   `===` also known as **strict equality** does not perform type coercion. It will only evaluate the same data type and value to true.
+-   `!=` is the opposite of the equality operator. It means its **not equal**, returning `false`.
+-   `!==` strictly inequality operator is the logical opposite, meaning strictly not equal.
+-   `>` greater than operator. `>=` is greater or equal then.
+-   `<` less than operator. `<=` less than or equal then.
+-   `&&` returns true if **both** operands are true.
+-   The logical `||`operator returns true if either operand is true.
+-

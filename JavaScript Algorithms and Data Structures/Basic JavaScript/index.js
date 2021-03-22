@@ -43,3 +43,47 @@ function timesFive(num) {
 }
 
 timesFive(5);
+
+// Creating a Queue in JavaScript
+
+function nextInLine(arr, item) {
+  arr.push(item);
+  return arr.shift(item);
+}
+
+var testArr = [1,2,3,4,5];
+
+// Testing
+console.log("Before: " + JSON.stringify(testArr));
+console.log(nextInLine(testArr, 6));
+console.log("After: " + JSON.stringify(testArr));
+
+// Using if-statement in a function
+
+function trueOrFalse(wasThatTrue) {
+  if (wasThatTrue) {
+    return "Yes, that was true";
+  }
+  return "No, that was false";
+}
+
+// Strict-equality function
+function testStrict(val) {
+  if (val === 7) { 
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+testStrict(10);
+
+// && Operator
+
+function testLogicalAnd(val) {
+  if (val <= 50 && val >= 25 ) {
+    return "Yes";
+  }
+  return "No";
+}
+
+testLogicalAnd(10);
