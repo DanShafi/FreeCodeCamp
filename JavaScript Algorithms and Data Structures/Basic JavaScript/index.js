@@ -87,3 +87,188 @@ function testLogicalAnd(val) {
 }
 
 testLogicalAnd(10);
+
+// Chained Else/If Statements
+
+function testElseIf(val) {
+  if (val > 10) {
+    return "Greater than 10";
+  } else if (val < 5) {
+    return "Smaller than 5";
+  } else {
+  return "Between 5 and 10";
+  }
+}
+
+testElseIf(7);
+
+// Golf-Game
+
+var names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+
+function golfScore(par, strokes) {
+  if (strokes == 1) {
+      return "Hole-in-one!";
+  } else if (strokes <= par - 2) {
+      return "Eagle"; 
+  } else if (strokes == par - 1) {
+      return "Birdie";
+  } else if (strokes == par) {
+      return "Par";
+  } else if (strokes == par + 1) {
+      return "Bogey";
+  } else if (strokes == par + 2) {
+      return "Double Bogey"
+  } else if (strokes >= par + 3) {
+      return "Go Home!";
+  } else {
+    return "Change Me";
+  }
+}
+
+golfScore(5, 4);
+
+// Switch Statement
+
+function caseInSwitch(val) {
+  var answer = "";
+
+  switch(val) {
+    case 1:
+      answer = "alpha";
+      break;
+    case 2:
+      answer = "beta";
+      break;
+    case 3:
+      answer = "gamma";
+      break;
+    case 4:
+      answer = "delta";
+      break;
+  }
+  return answer;
+}
+
+caseInSwitch(1);
+
+// Combined Switch Statement
+
+function sequentialSizes(val) {
+  var answer = "";
+
+  switch(val) {
+    case 1:
+    case 2:
+    case 3:
+      answer = "Low";
+      break;
+    case 4:
+    case 5:
+    case 6:
+      answer = "Mid";
+      break;
+    case 7:
+    case 8:
+    case 9:
+      answer = "High";
+  }
+  return answer;
+}
+
+sequentialSizes(1);
+
+// Counting Cards Game
+
+var count = 0;
+
+function cc(card) {
+  switch(card) {
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      count++
+      break;
+    case 10:
+    case 'J':
+    case 'Q':
+    case 'K':
+    case 'A':
+      count--
+      break;
+  }
+
+  if (count > 0) {
+    return count + " Bet";
+  } else {
+    return count + " Hold";
+  }
+}
+    
+cc(2); cc(3); cc(7); cc('K'); cc('A');
+
+
+// Using dot-notation on Objects
+var testObj = {
+  "hat": "ballcap",
+  "shirt": "jersey",
+  "shoes": "cleats"
+};
+
+var hatValue = testObj.hat;
+var shirtValue = testObj.shirt;    
+
+// Using objects instead of case/switch
+function phoneticLookup(val) {
+  var result = "";
+
+  var lookup = {
+    "alpha":"Adams",
+    "bravo":"Boston",
+    "charlie":"Chicago",
+    "delta":"Denver",
+    "echo":"Easy",
+    "foxtrot":"Frank",
+    " ":undefined,
+  };
+  return lookup[val];
+}
+
+phoneticLookup("charlie");
+
+// Checking if Property exists on object
+function checkObj(obj, checkProp) {
+  if(obj.hasOwnProperty(checkProp)) {
+    return obj[checkProp];
+  } else {
+    return "Not Found";
+  }
+}
+
+// Complex Objects
+
+var myMusic = [
+  {
+    "artist": "Billy Joel",
+    "title": "Piano Man",
+    "release_year": 1973,
+    "formats": [
+      "CD",
+      "8T",
+      "LP"
+    ],
+    "gold": true
+  },
+  {
+    "artist": "Dizzie Rascal",
+    "title": "Bow E3",
+    "release_year": 2019,
+    "formats": [
+      "CD",
+      "8T",
+      "LP"
+    ],
+  }
+];

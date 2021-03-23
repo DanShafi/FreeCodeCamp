@@ -79,6 +79,7 @@
 -   You can have local and global variables with the same name, however **the local variable takes precedence the global** if you do this.
 -   We use a `return` statement to send a value **back** out of a function.
 -   If a function outputs an `undefined` and you're expecting a value, it's most likely because there is no `return` statement.
+-   Once a `return` statement has been reached, the function will stop executing.
 
 **Conditional Logic**
 
@@ -92,4 +93,22 @@
 -   `<` less than operator. `<=` less than or equal then.
 -   `&&` returns true if **both** operands are true.
 -   The logical `||`operator returns true if either operand is true.
+-   `else` is used when a condition is otherwise false so it falls back to another condition.
+-   `else if` used for multiple conditions.
+
+**Switch Statements**
+
+-   If you have many options to choose from, use a `switch` and `case` statement. These statements are executed from first matched until a `break` is encountered.
+-   `case` values are tested with strict equality `===`.
+-   In a `switch` statement, we can use a `default` statement which is executed if no cases match.
+-   If a `break` is omitted from a switch statement case, statements are executed until a `break` is encountered. If you plan to have multiple inputs with the same output, combined them together.
+
+**Objects**
+
+-   Items in objects are referred to as `properties`. You can use numbers to mark properties and even omit single/double quotes (but JS will typecast these into strings).
+-   We can access object data using `.` or `[]` notation, similar to arrays.
+-   If the property name has a space in its name, you need to use `[]`.
+-   We can update object properties same as variables - reassignment.
+-   We can use the `delete` keyword to delete properties in objects.
+-   Use `.hasOwnProperty(propname)` to check if an object has a property. It will return either `true` or `false`.
 -
