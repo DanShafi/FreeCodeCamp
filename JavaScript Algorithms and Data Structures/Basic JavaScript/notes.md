@@ -111,4 +111,15 @@
 -   We can update object properties same as variables - reassignment.
 -   We can use the `delete` keyword to delete properties in objects.
 -   Use `.hasOwnProperty(propname)` to check if an object has a property. It will return either `true` or `false`.
+-   Sub properties can be accessed by chaining together dot or bracket notations.
+-   We can use array bracket notation can be chained to access nested arrays in objects.
+
+**Looping**
+
+-   A `while` loop continues to run until a specified condition is true and stops when that condition becomes false.
+-   A `for` loop runs a specified number of times. it's syntax is: `for (a; b; c)` where `a` is the initialisation statement, `b` is the condition and `c` is the final expression.
+-   We can do step jumps rather than iterating one at a time. We can achieve this by changing our final expression to `i += 2`.
+-   When we iterate through an array, we use `.length` method.
+-   When creating a nested for loop, we need to remember that the **inner** for loop will loop against the new array we created in our initial loop.
+-   A `do...while` loop first does one pass of the code inside the loop no matter what, then continue to run the loop until the specified condition is `true`.
 -
