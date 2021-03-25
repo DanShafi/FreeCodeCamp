@@ -122,4 +122,4 @@
 -   When we iterate through an array, we use `.length` method.
 -   When creating a nested for loop, we need to remember that the **inner** for loop will loop against the new array we created in our initial loop.
 -   A `do...while` loop first does one pass of the code inside the loop no matter what, then continue to run the loop until the specified condition is `true`.
--
+-   Recursion is a concept that a function can be expressed in terms of itself.
