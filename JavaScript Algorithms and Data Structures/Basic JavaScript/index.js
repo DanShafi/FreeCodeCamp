@@ -425,3 +425,8 @@ return "No such contact";
 }
 
 lookUpProfile("Akira", "likes");
+
+// Using Math functions
+function randomWholeNum() {
+  return Math.floor(Math.random() * 10);
+}
