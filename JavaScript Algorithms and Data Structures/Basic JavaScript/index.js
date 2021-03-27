@@ -430,3 +430,15 @@ lookUpProfile("Akira", "likes");
 function randomWholeNum() {
   return Math.floor(Math.random() * 10);
 }
+
+// Calculating within range
+function randomRange(myMin, myMax) {
+  return Math.floor(Math.random() * (myMax - myMin + 1) + myMin);
+}
+
+// Using parseInt()
+function convertToInteger(str) {
+  return parseInt(str);
+}
+
+convertToInteger("56");

@@ -122,3 +122,8 @@
 -   A `do...while` loop first does one pass of the code inside the loop no matter what, then continue to run the loop until the specified condition is `true`.
 -   Recursion is a concept that a function can be expressed in terms of itself.
 -   We can created nested loops.
+
+**Methods**
+
+-   The `parseInt()` method parses a string and returns an integer. For example: `parseInt("7")` returns the integer `7`.
+-
