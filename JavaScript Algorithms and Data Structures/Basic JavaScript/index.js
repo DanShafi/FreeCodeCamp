@@ -442,3 +442,49 @@ function convertToInteger(str) {
 }
 
 convertToInteger("56");
+
+// Using a radix in ParseInt()
+function convertToInteger(str) {
+  return parseInt(str, 2);
+}
+
+convertToInteger("10011");
+
+// Using a ternary operator
+
+function checkEqual(a, b) {
+  return a == b ? "Equal" : "Not Equal";
+}
+
+checkEqual(1, 2);
+
+// Multiple ternary operators
+function checkSign(num) {
+  return (num == 0) ? "zero" : (num > 0) ? "positive" : "negative";
+}
+
+checkSign(10);
+
+// Recursively counting down
+function countdown(n) {
+  if (n < 1) {
+    return [];
+  } else {
+    const countArr = countdown(n - 1);
+    countArr.unshift(n);
+    return countArr;
+  }
+}
+
+console.log(countdown(5));
+
+// Recursive range of numbers function
+function rangeOfNumbers(startNum, endNum) {
+  if (endNum - startNum === 0) {
+    return [startNum];
+  } else {
+    var numbers = rangeOfNumbers(startNum, endNum - 1);
+    numbers.push(endNum);
+    return numbers;
+  }
+}
