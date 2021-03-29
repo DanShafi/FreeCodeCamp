@@ -59,4 +59,6 @@ function freezeObj() {
   }
   const PI = freezeObj();
 
+  // Arrow Functions
+  const magic = () => new Date();
   
