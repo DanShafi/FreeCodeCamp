@@ -30,3 +30,17 @@ const dateNow = () => new Date();
 ```
 
 -   We can also write arrow functions with params. If a function has a single param, we can omit the parentheses like so: `const myFunc = item => item * 2;`
+-   ES6 allows us for default param arguments, so that if an argument isn't passed by the user, it falls back to a default value defined in the function head.
+
+    -   The _rest parameter_ in ES6 functions allow you to create functions that take in a variable number of arguments. The arguments are then stored in an **array** that can be accessed later. The syntax passed in is `(...args)`. An example is:
+
+    ```jsx
+    function howMany(...args) {
+        return "You have passed " + args.length + " arguments.";
+    }
+    console.log(howMany(0, 1, 2));
+    console.log(howMany("string", null, [1, 2, 3], {}));
+    ```
+
+-   The _spread operator_ works by **unpacking** an array as a variable. It takes in an array as an argument, spreads it so we can unpack values from it. The syntax is the same as the _rest operator_ but instead of using it as a function argument, we can assign it to any variable.
+-

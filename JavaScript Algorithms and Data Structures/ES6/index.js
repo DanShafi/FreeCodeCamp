@@ -61,4 +61,20 @@ function freezeObj() {
 
   // Arrow Functions
   const magic = () => new Date();
-  
+
+  // Default param arguments
+const increment = (number, value = 1) => number + value;
+
+// Rest param
+const sum = (...args) => {
+    return args.reduce((a, b) => a + b, 0);
+  }
+
+// Using Spread Operator
+const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+let arr2;
+
+arr2 = [...arr1];
+console.log(arr2);
+
+
