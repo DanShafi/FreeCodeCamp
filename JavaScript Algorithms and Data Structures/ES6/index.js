@@ -77,4 +77,39 @@ let arr2;
 arr2 = [...arr1];
 console.log(arr2);
 
-// Edit
+// Destructuring to grab values
+const HIGH_TEMPERATURES = {
+    yesterday: 75,
+    today: 77,
+    tomorrow: 80
+  };
+
+  const { today, tomorrow } = HIGH_TEMPERATURES;
+  
+// Destructuring to assign variables
+const HIGH_TEMPERATURES = {
+    yesterday: 75,
+    today: 77,
+    tomorrow: 80
+  };
+    
+  const { today: highToday, tomorrow: highTomorrow} = HIGH_TEMPERATURES;
+
+
+// Destructuring on a Nested object
+const LOCAL_FORECAST = {
+    yesterday: { low: 61, high: 75 },
+    today: { low: 64, high: 77 },
+    tomorrow: { low: 68, high: 80 }
+  };
+  
+  const { today: { low: lowToday, high: highToday}} = LOCAL_FORECAST;
+
+  
+  // Destructuring on an Array to omit the first two values:
+const source = [1,2,3,4,5,6,7,8,9,10];
+function removeFirstTwo(list) {
+  const [,, ...arr] = list;
+  return arr;
+}
+const arr = removeFirstTwo(source);

@@ -43,4 +43,37 @@ const dateNow = () => new Date();
     ```
 
 -   The _spread operator_ works by **unpacking** an array as a variable. It takes in an array as an argument, spreads it so we can unpack values from it. The syntax is the same as the _rest operator_ but instead of using it as a function argument, we can assign it to any variable.
--
+
+**Destructuring**
+
+-   Destructuring means neatly assigning values directly from an object. For example, this syntax: `const { name, age } = user;` would allow us to use `user.name` and `user.age`. This is the same as using:
+
+```jsx
+const user = { name: "John Doe", age: 34 };
+
+const name = user.name;
+const age = user.age;
+```
+
+-   We can also use destructuring to assign variables from the object. For example, we can create a variable and it's value can be an object's key value. The syntax for this would be: `const { name: userName, age: userAge } = user;`. We have now assigned `userName` and `userAge` to that objects key value.
+-   We can do the same for nested objects, instead the syntax will be: `const { johnDoe: { age, email }} = user;` and assigning them to variables will be: `const { johnDoe: { age: userAge, email: userEmail }} = user;`
+-   For array destructuring, the variable we create represents the first index of the array and so on. If we want to reach a desired number in an array, we place commas to indicate the start index comma to the desired end index we want to evaluate. For example:
+
+```jsx
+const [a, b] = [1, 2, 3, 4, 5, 6];
+console.log(a, b); // 1,2
+
+const [a, b, , , c] = [1, 2, 3, 4, 5, 6];
+console.log(a, b, c); // 1,2,5
+```
+
+-   In this example below, we are destructing an array using the spread operator to omit the two first values in an array, copy the original array and then assign this to a new variable:
+
+```jsx
+const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function removeFirstTwo(list) {
+    const [, , ...arr] = list; // When making ...arr, we are creating a const variable.
+    return arr;
+}
+const arr = removeFirstTwo(source);
+```
