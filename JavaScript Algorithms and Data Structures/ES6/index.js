@@ -113,3 +113,71 @@ function removeFirstTwo(list) {
   return arr;
 }
 const arr = removeFirstTwo(source);
+
+// Using Template Literal in a function
+const result = {
+    success: ["max-length", "no-amd", "prefer-arrow-functions"],
+    failure: ["no-var", "var-on-top", "linebreak"],
+    skipped: ["no-extra-semi", "no-dup-keys"]
+  };
+
+  function makeList(arr) {
+    const failureItems = [];
+
+    for (let i = 0; i < arr.length; i++) {
+      failureItems.push(`<li class="text-warning">${arr[i]}</li>`);
+    }
+    return failureItems;
+  }
+  
+  const failuresList = makeList(result.failure);
+
+// Using Object Literal
+const createPerson = (name, age, gender) => {
+return ({ name, age, gender });
+};
+
+// Declarative function syntax
+const bicycle = {
+    gear: 2,
+    setGear(newGear) {
+      this.gear = newGear;
+    }
+  };
+
+  bicycle.setGear(3);
+  console.log(bicycle.gear);
+
+// Using ES6 class and constructor method
+class Vegetable {
+    constructor(name) {
+      this.name = name;
+    }
+  }
+  
+const carrot = new Vegetable('carrot');
+console.log(carrot.name); // Should display 'carrot'
+
+
+// Exporting Modules 
+const uppercaseString = (string) => {
+    return string.toUpperCase();
+  }
+  
+const lowercaseString = (string) => {
+return string.toLowerCase()
+}
+  
+export { uppercaseString, lowercaseString };
+
+// Importing Modules
+import { uppercaseString, lowercaseString } from './string_functions.js';
+uppercaseString("hello");
+lowercaseString("WORLD!");
+
+// Importing entire file exports
+import * as stringFunctions from "./string_functions.js";
+stringFunctions.uppercaseString("hello");
+stringFunctions.lowercaseString("WORLD!");
+
+
