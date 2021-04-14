@@ -165,5 +165,3 @@ const createPerson = (name, age, gender) => {
 
 -   We can export multiple variables or functions by either using the `export` prefix to a function or variable or collect all the names of things we want to export at the end of the script.
 -   Import works in the same way, although we append this to the top of the file. We import what variable we want and use the `from` keyword to reference the file we are calling i.e. `import { add, subtract } from './math_functions.js';`
--   To be updated
--   TBC
