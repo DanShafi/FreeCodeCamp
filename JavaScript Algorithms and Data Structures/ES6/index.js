@@ -182,3 +182,36 @@ stringFunctions.lowercaseString("WORLD!");
 
 
 // Export Fallback
+export default function subtract(x, y) {
+  return x - y;
+}
+
+// JavaScript Promise
+const myPromise = new Promise((resolve, reject) => {
+  if(condition) {
+    resolve("Promise was fulfilled");
+  } else {
+    reject("Promise was rejected");
+  }
+});
+
+// Handling a Fulfilled Promise with then
+const makeServerRequest = new Promise((resolve, reject) => {
+  // responseFromServer is set to true to represent a successful response from a server
+  let responseFromServer = true;
+    
+  if(responseFromServer) {
+    resolve("We got the data");
+  } else {  
+    reject("Data not received");
+  }
+});
+
+makeServerRequest.then(result => {
+  console.log(result);
+});
+
+//Handling a Rejected promise with catch
+makeServerRequest.catch(error => {
+  console.log(error);
+});

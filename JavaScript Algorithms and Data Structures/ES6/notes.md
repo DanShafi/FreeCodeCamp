@@ -165,4 +165,52 @@ const createPerson = (name, age, gender) => {
 
 -   We can export multiple variables or functions by either using the `export` prefix to a function or variable or collect all the names of things we want to export at the end of the script.
 -   Import works in the same way, although we append this to the top of the file. We import what variable we want and use the `from` keyword to reference the file we are calling i.e. `import { add, subtract } from './math_functions.js';`
--   TBC
+
+**Promise**
+
+-   A _promise_ is a **constructor function** so you need to use the `new` keyword to create one. It's function serves to either fulfil or reject a promise, asynchronously.
+-   A promise takes a function as its argument with two params `resolve` and `reject`.
+-   The syntax for a Promise is as such:
+
+```jsx
+const myPromise = new Promise((resolve, reject) => {});
+```
+
+-   A promise has three states: `pending`, `fulfilled` and `rejected`.
+
+```jsx
+// A Promise example
+
+const myPromise = new Promise((resolve, reject) => {
+  if(condition here) {
+    resolve("Promise was fulfilled");
+  } else {
+    reject("Promise was rejected");
+  }
+});
+```
+
+-   Promises are most useful when a process takes an unknown amount of time. We can use the `then` method which executes immediately after the promise has been executed. This can be the intended action required from the programme depending on the promise outcome.
+
+```jsx
+const makeServerRequest = new Promise((resolve, reject) => {
+    // responseFromServer is set to true to represent a successful response from a server
+    let responseFromServer = true;
+
+    if (responseFromServer) {
+        resolve("We got the data");
+    } else {
+        reject("Data not received");
+    }
+});
+
+makeServerRequest.then((result) => {
+    console.log(result);
+});
+```
+
+-   `catch` is used when a promise has been rejected. It too is also executed immediately after the promise has executed. The syntax for this is:
+
+```jsx
+myPromise.catch((error) => {});
+```
