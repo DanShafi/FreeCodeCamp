@@ -1,0 +1,4 @@
+-   Regex is used to match parts of strings. We create the patterns to help us do the matching.
+-   JS uses different ways to use regexes, one way is through the `.test()` method. This takes in a argument of the string and returns `true` or `false` if the pattern finds something.
+-   We can use `alternation` or the `OR` operator: `|` to match different possibilities. For example, we can use the regex `/yes|no/` to look for both the `yes` and `no` string match. We can continue placing the `|` if we want more matches.
+-
