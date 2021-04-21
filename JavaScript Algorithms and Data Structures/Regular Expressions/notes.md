@@ -20,4 +20,7 @@
 
 **Classes**
 
--   Character classes allow us to have flexibility in our search. We define characters in `[` and `]` brackets. For example, if we want to match `bag`,`big` and `bug` but not `bog`, we can use the regex `/b[aiu]g/`. This will look for all b and g ending words that _only_ have a,i,u in them.
+-   Character classes allow us to have flexibility in our search. We define characters in `[` and `]` brackets. For example, if we want to match `bag`,`big` and `bug` but not `bog`, we can use the regex `/b[aiu]g/`. This will look for all b and g ending words that _only_ have either a,i,u in them.
+-   Instead of defining each character of the alphabet, you can use the `-` character in your bracketed regex to use a range for example `[a-f]` which will only match characters from a to f in the alphabet.
+-   We can also use the `-` character to include number ranges. Note, the range will also count from the starting index you express. We can combine this with letters to i.e. `/[a-z0-9]/`.
+-   We can use the `^` in our regex to create a set of chars that we do not want to match. This is called _negated character sets._

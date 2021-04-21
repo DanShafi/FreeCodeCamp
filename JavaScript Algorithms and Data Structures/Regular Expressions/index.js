@@ -28,3 +28,22 @@ let exampleStr = "Let's have fun with regular expressions!";
 let unRegex = /.un/;
 let result = unRegex.test(exampleStr);
 
+// Using character classes
+let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+let vowelRegex = /[aeiou]/ig;
+let result = quoteSample.match(vowelRegex);
+
+// Using the - character
+let quoteSample = "The quick brown fox jumps over the lazy dog.";
+let alphabetRegex = /[a-z]/gi
+let result = quoteSample.match(alphabetRegex);
+
+// Using both number and letter ranges
+let quoteSample = "Blueberry 3.141592653s are delicious.";
+let myRegex = /[h-s2-6]/gi;
+let result = quoteSample.match(myRegex);
+
+// Match characters not specified
+let quoteSample = "3 blind mice.";
+let myRegex = /[^3aeiou]/gi; // Change this line
+let result = quoteSample.match(myRegex); // Change this line
