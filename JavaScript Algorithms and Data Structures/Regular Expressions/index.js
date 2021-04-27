@@ -45,5 +45,15 @@ let result = quoteSample.match(myRegex);
 
 // Match characters not specified
 let quoteSample = "3 blind mice.";
-let myRegex = /[^3aeiou]/gi; // Change this line
-let result = quoteSample.match(myRegex); // Change this line
+let myRegex = /[^3aeiou]/gi; 
+let result = quoteSample.match(myRegex); 
+
+// Using the + sign
+let difficultSpelling = "Mississippi";
+let myRegex = /s+/g;
+let result = difficultSpelling.match(myRegex);
+
+// Using lazy matching
+let text = "<h1>Winter is coming</h1>";
+let myRegex = /<.*?>/;
+let result = text.match(myRegex);
