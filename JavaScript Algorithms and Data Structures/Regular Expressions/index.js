@@ -57,3 +57,8 @@ let result = difficultSpelling.match(myRegex);
 let text = "<h1>Winter is coming</h1>";
 let myRegex = /<.*?>/;
 let result = text.match(myRegex);
+
+// Using the \w shorthand
+let quoteSample = "The five boxing wizards jump quickly.";
+let alphabetRegexV2 = /\w/g;
+let result = quoteSample.match(alphabetRegexV2).length;

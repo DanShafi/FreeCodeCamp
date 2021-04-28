@@ -27,4 +27,4 @@
 
 -   Character classes allow us to have flexibility in our search. We define characters in `[` and `]` brackets. For example, if we want to match `bag`,`big` and `bug` but not `bog`, we can use the regex `/b[aiu]g/`. This will look for all b and g ending words that _only_ have either a,i,u in them.
 -   Instead of defining each character of the alphabet, you can use the `-` character in your bracketed regex to use a range for example `[a-f]` which will only match characters from a to f in the alphabet.
--
+-   TBC
